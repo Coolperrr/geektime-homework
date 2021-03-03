@@ -150,6 +150,8 @@ public class FrontControllerServlet extends HttpServlet {
                         return;
                     } else if (controller instanceof RestController) {
                         // TODO
+                        RestController restController = RestController.class.cast(controller);
+                        restController.execute1(request, response);
                     }
 
                 }
